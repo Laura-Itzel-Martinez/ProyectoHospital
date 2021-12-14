@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Pacientes</div>
+                <div class="card-header" style="background-color: #F9D8CE">Pacientes</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,8 +24,8 @@
                     <br>
                     <div class="col">
                        
-                        <table class="table table-bordered border-primary">
-                            <thead>
+                        <table class="table table-bordered">
+                            <thead style="background-color: #6CB2D1">
                               <tr>
                                 <th scope="col">Numero de expediente</th>
                                 <th scope="col">Nombre del paciente</th>

@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card text-center">
-                <div class="card-header">Agregar datos del paciente</div>
+                <div class="card-header" style="background-color: #FFA78C" >Agregar datos del paciente</div>
                     <div class="card-body">
                         <form action="{{route('store')}}" method="post" >
             
@@ -47,8 +47,8 @@
                             
                        </form>
                     </div>
-                    <div class="card-footer text-muted">
-                    2 days ago
+                    <div class="card-footer text-muted" style="background-color:  #FFE59E">
+                        El tiempo es generalmente el mejor médico.
                 </div>
             </div>
         </div>

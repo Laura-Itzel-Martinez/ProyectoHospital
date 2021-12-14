@@ -49,7 +49,7 @@
                        </form>
                     </div>
                     <div class="card-footer text-muted">
-                    2 days ago
+                    Actualizacion de datos
                 </div>
             </div>
         </div>
