@@ -1,11 +1,12 @@
 @extends('layouts.app')
+@extends('layouts.plantilla')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">Pacientes</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -23,25 +24,38 @@
                     <br>
                     <div class="col">
                        
-                        <table class="table" id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table class="table table-bordered border-primary">
                             <thead>
                               <tr>
                                 <th scope="col">Numero de expediente</th>
                                 <th scope="col">Nombre del paciente</th>
+                                <th scope="col">Selecionar</th>
+                                <th scope="col">Eliminar</th>
                               </tr>
                             </thead>
                             <tbody>
+
+                               
                                 @foreach ($paciente as $pacientes) 
 
-                              <tr>
-                                <th scope="row">{{$pacientes->id}}</th>
+                                <tr>
+                                    <th scope="row">{{$pacientes->id}}</th>
 
-                                <td><a href="{{route('show', $pacientes->id)}}">
-                                    {{$pacientes->apellido_paterno}} {{$pacientes->apellido_materno}} {{$pacientes->nombre}}</a>
-                                </td>
+                                    <td><a href="{{route('show', $pacientes->id)}}">
+                                        {{$pacientes->apellido_paterno}} {{$pacientes->apellido_materno}} {{$pacientes->nombre}}</a>
+                                    </td>
 
-                              </tr>
-                              @endforeach 
+                                    <td>
+                                        <a class="btn btn-success" href="{{route('show', $pacientes->id)}}" role="button">Seleccionar expediente</a>
+                                    </td>
+
+                                    <form action="{{route('destroy', $pacientes)}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <td><button class="btn btn-danger " >Eliminar</button></td>
+                                    </form>
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -52,5 +66,7 @@
 </div>
 
 @endsection
+
+
 
 

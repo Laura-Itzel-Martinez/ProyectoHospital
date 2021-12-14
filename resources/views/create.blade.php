@@ -36,6 +36,7 @@
                             <br>
                             <label for="">Sexo:
                                 <select name="sexo" class="form-control" >
+                                    <option selected>Selecciona sexo</option>
                                     <option value="feminino">Feminino</option>
                                     <option value="masculino">Masculino</option>
                                   </select>
